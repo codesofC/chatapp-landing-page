@@ -77,7 +77,7 @@ const Navbar = () => {
               <Link
                 href={opt.link}
                 key={index}
-                className="font-semibold w-full md:w-auto hover:bg-primary hover:text-secondary md:hover:bg-transparent md:hover:text-foreground p-4"
+                className="font-semibold w-full md:w-auto hover:bg-primary hover:text-white md:hover:bg-transparent md:hover:text-foreground p-4"
               >
                 {opt.label}
               </Link>

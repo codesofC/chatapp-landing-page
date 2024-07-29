@@ -19,7 +19,7 @@ const GetApp = () => {
           variants={fadeIn({ direction: "right" })}
           initial="hidden"
           animate="show"
-          className="relative w-1/3 lg:w-1/4 flex items-center justify-center"
+          className="relative w-1/2 sm:w-1/3 lg:w-1/4 flex items-center justify-center"
         >
           <Image
             src="/assets/android2.png"
@@ -36,7 +36,7 @@ const GetApp = () => {
             className="w-full object-contain lg:absolute lg:top-10 lg:-left-32"
           />
         </motion.div>
-        <div className="px-6 lg:w-1/2 text-foreground">
+        <div className="md:px-6 lg:w-1/2 text-foreground">
           <div className="flex flex-col gap-6 items-center">
             <motion.h1
               variants={fadeIn({ duration: 1 })}
@@ -72,7 +72,7 @@ const GetApp = () => {
                   alt="app store"
                   width={75}
                   height={75}
-                  className="size-8"
+                  className="size-6 md:size-8"
                 />
                 App store
               </Link>
@@ -85,7 +85,7 @@ const GetApp = () => {
                   alt="app store"
                   width={75}
                   height={75}
-                  className="size-8"
+                  className="size-6 md:size-8"
                 />
                 Play store
               </Link>

@@ -21,7 +21,7 @@ const Hero = () => {
             variants={textVariant(1.1)}
             initial="hidden"
             animate="show"
-            className="text-6xl font-bold text-center md:text-start"
+            className="text-5xl md:text-6xl font-bold text-center md:text-start"
           >
             Send messages privately
           </motion.h1>
