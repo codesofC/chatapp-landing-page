@@ -1,59 +1,100 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 const GetApp = () => {
   return (
-    <section className="flex flex-col items-center justify-between w-full px-6 md:px-8 lg:px-16 xl:px-64 my-24">
-        <h1 className="text-2xl text-border flex items-center justify-center w-full font-semibold mb-6">
-          {" "}
-          Get our app{" "}
-        </h1>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
-          <div className="relative w-1/3 lg:w-1/4 flex items-center justify-center">
-            <Image
-              src="/assets/android2.png"
-              alt="demo mobile"
-              width={1200}
-              height={800}
-              className="w-full object-contain"
-            />
-            <Image
-              src="/assets/android1.png"
-              alt="demo mobile"
-              width={1200}
-              height={800}
-              className="w-full object-contain lg:absolute lg:top-10 lg:-left-32"
-            />
-          </div>
-          <div className="px-6 lg:w-1/2">
-            <div className="flex flex-col gap-6 items-center">
-              <p className="text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatibus similique ullam minima consequuntur praesentium.
-                Dolor eaque atque assumenda porro doloremque distinctio
-                cupiditate quae, quod minus non sed omnis quis. Perspiciatis.
-              </p>
+    <section className="flex flex-col items-center justify-between w-full px-6 md:px-8 lg:px-16 xl:px-64 my-32">
+      <motion.h1 
+      variants={fadeIn({direction: "down"})}
+      initial="hidden"
+      animate="show"
+      className="text-2xl text-border flex items-center justify-center w-full font-semibold mb-6">
+        {" "}
+        Get our app{" "}
+      </motion.h1>
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
+        <motion.div
+          variants={fadeIn({ direction: "right" })}
+          initial="hidden"
+          animate="show"
+          className="relative w-1/3 lg:w-1/4 flex items-center justify-center"
+        >
+          <Image
+            src="/assets/android2.png"
+            alt="demo mobile"
+            width={1200}
+            height={800}
+            className="w-full object-contain"
+          />
+          <Image
+            src="/assets/android1.png"
+            alt="demo mobile"
+            width={1200}
+            height={800}
+            className="w-full object-contain lg:absolute lg:top-10 lg:-left-32"
+          />
+        </motion.div>
+        <div className="px-6 lg:w-1/2 text-foreground">
+          <div className="flex flex-col gap-6 items-center">
+            <motion.h1
+              variants={fadeIn({ duration: 1 })}
+              initial="hidden"
+              animate="show"
+              className="font-bold text-4xl"
+            >
+              No ads. No trackers. No kidding.
+            </motion.h1>
+            <motion.p
+              variants={fadeIn({ duration: 1 })}
+              initial="hidden"
+              animate="show"
+              className="text-justify"
+            >
+              There are no ads, no affiliate marketers, and no creepy tracking
+              in Snaptalk. So focus on sharing the moments that matter with the
+              people who matter to you.
+            </motion.p>
 
-              <div className="flex items-center gap-6 lg:gap-12 xl:gap-16">
-                <Link
-                  href=""
-                  className="px-8 py-4 rounded-full bg-primary text-white"
-                >
-                  App store
-                </Link>
-                <Link
-                  href=""
-                  className="px-8 py-4 rounded-full bg-primary text-white"
-                >
-                  Play store
-                </Link>
-              </div>
-            </div>
+            <motion.div
+              variants={fadeIn({ duration: 1, direction: "up" })}
+              initial="hidden"
+              animate="show"
+              className="flex items-center gap-6 lg:gap-12 xl:gap-16"
+            >
+              <Link
+                href=""
+                className="px-4 py-2 rounded-lg flex items-center gap-1 border"
+              >
+                <Image
+                  src="https://static.wikia.nocookie.net/logo-timeline/images/b/b0/App_Store_iOS.png/revision/latest/scale-to-width-down/1024?cb=20210207214734"
+                  alt="app store"
+                  width={75}
+                  height={75}
+                  className="size-8"
+                />
+                App store
+              </Link>
+              <Link
+                href=""
+                className="px-4 py-2 rounded-lg flex items-center gap-1 border"
+              >
+                <Image
+                  src="https://static-00.iconduck.com/assets.00/google-play-icon-958x1024-scyukz7k.png"
+                  alt="app store"
+                  width={75}
+                  height={75}
+                  className="size-8"
+                />
+                Play store
+              </Link>
+            </motion.div>
           </div>
         </div>
-      </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default GetApp
+export default GetApp;

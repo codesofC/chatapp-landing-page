@@ -1,31 +1,52 @@
+"use client";
+
 import GetApp from "@/components/GetApp";
 import Hero from "@/components/Hero";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
+import { fadeIn } from "@/utils/motion";
 
 export default function Home() {
   return (
-    <main>
+    <main className={cn("bg-background")}>
       <Hero />
       <GetApp />
-      <section className="flex flex-col items-center justify-between w-full px-6 md:px-8 lg:px-16 xl:px-64 my-24">
-      <h1 className="text-2xl text-border flex items-center justify-center w-full font-semibold mb-6">
-          Anywhere! Anyone!
-        </h1>
-        <div className="grid grid-cols-2">
-          <div className="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint quidem ad eos. Fugit perspiciatis cumque nam reiciendis quis, mollitia ipsam totam in sequi soluta aut pariatur iusto laboriosam iste ut fuga repellendus non nemo, accusantium eveniet beatae. Animi autem molestiae expedita minus a, consequuntur, ipsum magni, quae optio qui repudiandae?
-          </div>
-          <div className="w-full max-h-[60vh]">
-            <Image 
-              src="/assets/home.png"
-              alt="world"
-              width={1200}
-              height={800}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
+      <section className="flex flex-col md:flex-row items-center justify-between gap-6 w-full px-6 md:px-8 lg:px-16 xl:px-64 my-24">
+        <motion.div className="space-y-4 text-foreground">
+          <motion.h1
+            variants={fadeIn({ direction: "down", duration: 0.5 })}
+            initial="hidden"
+            animate="show"
+            className="font-bold text-4xl text-center"
+          >
+            Free for Everyone
+          </motion.h1>
+          <motion.p
+            variants={fadeIn({ direction: "up", duration: 0.5 })}
+            initial="hidden"
+            animate="show"
+            className="text-justify"
+          >
+            Express yourself without words. Use emojis and GIFs or share
+            everyday moments from pictures. Record a voice message for a quick
+            hello or a longer story.
+          </motion.p>
+        </motion.div>
+        <motion.div
+          variants={fadeIn({ duration: 3 })}
+          initial="hidden"
+          animate="show"
+          className="w-full max-h-[60vh]"
+        >
+          <Image
+            src="/assets/home.png"
+            alt="world"
+            width={1200}
+            height={800}
+            className="w-full h-full object-contain"
+          />
+        </motion.div>
       </section>
     </main>
   );
