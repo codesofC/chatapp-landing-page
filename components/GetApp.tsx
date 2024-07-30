@@ -6,11 +6,13 @@ import { fadeIn } from "@/utils/motion";
 const GetApp = () => {
   return (
     <section className="flex flex-col items-center justify-between w-full px-6 md:px-8 lg:px-16 xl:px-64 my-32">
-      <motion.h1 
-      variants={fadeIn({direction: "down"})}
-      initial="hidden"
-      animate="show"
-      className="text-2xl text-border flex items-center justify-center w-full font-semibold mb-6">
+      <motion.h1
+        variants={fadeIn({ direction: "down" })}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="text-2xl text-border flex items-center justify-center w-full font-semibold mb-6"
+      >
         {" "}
         Get our app{" "}
       </motion.h1>
@@ -18,7 +20,8 @@ const GetApp = () => {
         <motion.div
           variants={fadeIn({ direction: "right" })}
           initial="hidden"
-          animate="show"
+          whileInView="show"
+          viewport={{ once: true }}
           className="relative w-1/2 sm:w-1/3 lg:w-1/4 flex items-center justify-center"
         >
           <Image
@@ -41,7 +44,8 @@ const GetApp = () => {
             <motion.h1
               variants={fadeIn({ duration: 1 })}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true }}
               className="font-bold text-4xl"
             >
               No ads. No trackers. No kidding.
@@ -49,7 +53,8 @@ const GetApp = () => {
             <motion.p
               variants={fadeIn({ duration: 1 })}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true }}
               className="text-justify"
             >
               There are no ads, no affiliate marketers, and no creepy tracking
@@ -60,7 +65,8 @@ const GetApp = () => {
             <motion.div
               variants={fadeIn({ duration: 1, direction: "up" })}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true }}
               className="flex items-center gap-6 lg:gap-12 xl:gap-16"
             >
               <Link
