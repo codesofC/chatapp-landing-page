@@ -1,5 +1,6 @@
-
-<img src="https://github.com/user-attachments/assets/0c2ff02b-0df6-4447-bc77-6699d944c4a9" alt="logo" style="width:20%;">
+<div style="text-align:center;">
+  <img src="https://github.com/user-attachments/assets/0c2ff02b-0df6-4447-bc77-6699d944c4a9" alt="logo" style="width:20%;">
+</div>
 
 <h1 style="text-align: center;"> SnapTalk- A real-time web and mobile chat application </h1>
 
