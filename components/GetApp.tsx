@@ -7,7 +7,7 @@ const GetApp = () => {
   return (
     <section className="flex flex-col items-center justify-between w-full px-6 md:px-8 lg:px-16 xl:px-64 my-32">
       <motion.h1
-        variants={fadeIn({ direction: "down" })}
+        variants={fadeIn({ direction: "down", delay: 0.2 })}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
@@ -18,7 +18,7 @@ const GetApp = () => {
       </motion.h1>
       <div className="flex flex-col lg:flex-row items-center justify-center gap-4">
         <motion.div
-          variants={fadeIn({ direction: "right" })}
+          variants={fadeIn({ direction: "right", delay: 0.5 })}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ const GetApp = () => {
         <div className="md:px-6 lg:w-1/2 text-foreground">
           <div className="flex flex-col gap-6 items-center">
             <motion.h1
-              variants={fadeIn({ duration: 1 })}
+              variants={fadeIn({ duration: .3 })}
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}

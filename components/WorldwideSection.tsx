@@ -28,7 +28,7 @@ const WorldwideSection = () => {
         </motion.p>
       </motion.div>
       <motion.div
-        variants={fadeIn({ duration: 3 })}
+        variants={fadeIn({ duration: 1, direction: "left" })}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

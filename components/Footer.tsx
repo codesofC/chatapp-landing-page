@@ -14,7 +14,7 @@ const Footer = () => {
       animate="show"
       className="flex flex-col gap-4 w-full items-center"
     >
-      <div className="flex items-start gap-6 lg:gap-52 px-6 w-full justify-center mb-6">
+      <div className="flex items-start gap-6 lg:gap-52 px-6 lg:px-40 w-full justify-between mb-6">
         <div className="w-20">
           <Image
             src="/assets/logo.png"
@@ -31,7 +31,17 @@ const Footer = () => {
             <li className="cursor-pointer"> Help </li>
             <li className="cursor-pointer"> SnapTalk </li>
           </ul>
+          <ul className="hidden md:flex items-center gap-6">
+            <li className="cursor-pointer"> Blog </li>
+            <li className="cursor-pointer"> Help </li>
+            <li className="cursor-pointer"> SnapTalk </li>
+          </ul>
         </div>
+        <ul className="hidden md:flex flex-col gap-6">
+            <li className="cursor-pointer"> Blog </li>
+            <li className="cursor-pointer"> Help </li>
+            <li className="cursor-pointer"> SnapTalk </li>
+          </ul>
       </div>
       <div className="flex items-center gap-2 px-6">
         <Link href="" className="border p-2 rounded-md hover:bg-border">

@@ -45,7 +45,7 @@ const people = [
 export function UsersList() {
   return (
     <motion.div
-      variants={textVariant(1.25)}
+      variants={textVariant(0.7)}
       initial="hidden"
       animate="show"
       className="flex flex-row items-center"
