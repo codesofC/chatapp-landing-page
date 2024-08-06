@@ -71,29 +71,27 @@ const GetApp = () => {
             >
               <Link
                 href=""
-                className="px-4 py-2 rounded-lg flex items-center gap-1 border"
+                className="rounded-lg flex items-center gap-1 w-[150px]"
               >
                 <Image
-                  src="https://static.wikia.nocookie.net/logo-timeline/images/b/b0/App_Store_iOS.png/revision/latest/scale-to-width-down/1024?cb=20210207214734"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
                   alt="app store"
-                  width={75}
-                  height={75}
-                  className="size-6 md:size-8"
+                  width={800}
+                  height={800}
+                  className="w-full object-contain"
                 />
-                App store
               </Link>
               <Link
                 href=""
-                className="px-4 py-2 rounded-lg flex items-center gap-1 border"
+                className="rounded-lg flex items-center gap-1 w-[170px]"
               >
                 <Image
-                  src="https://static-00.iconduck.com/assets.00/google-play-icon-958x1024-scyukz7k.png"
+                  src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
                   alt="app store"
-                  width={75}
-                  height={75}
-                  className="size-6 md:size-8"
+                  width={800}
+                  height={800}
+                  className="w-full object-contain"
                 />
-                Play store
               </Link>
             </motion.div>
           </div>
